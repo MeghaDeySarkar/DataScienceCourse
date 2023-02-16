@@ -1,0 +1,11 @@
+select * from insurancedata where gender = 'male' and region ='southwest';
+select * from insurancedata where bmi >= 30 and bmi <= 45;
+select min(bloodpressure) as MinBP, max(bloodpressure) as MaxBP from insurancedata where diabetic = 'yes' and smoker ='no';
+select count(PatientID) from insurancedata where region not in ('southwest');
+select sum(claim) from insurancedata where gender = 'male' and smoker = 'yes';
+select * from insurancedata where region like 'south%';
+select count(PatientID) from insurancedata where bloodpressure >= 90 and bloodpressure <= 120;
+select count(PatientID) from insurancedata where age < 17 and bloodpressure >= 80+(age*2) and bloodpressure <= 100+(age*2);
+select avg(claim) from insurancedata where gender = 'female' and diabetic ='yes' and smoker='no';
+UPDATE insurancedata SET clain = 5000 WHERE PatientID = 1234  ;
+delete from insurancedata where smoker ='yes' and children ='no';
